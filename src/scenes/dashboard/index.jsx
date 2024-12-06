@@ -81,7 +81,7 @@ function Dashboard() {
         >
           <StatBox
             title="11,361"
-            subtitle="Email Sent"
+            subtitle="Total Students"
             progress="0.75"
             increase="+14%"
             icon={
@@ -100,7 +100,7 @@ function Dashboard() {
         >
           <StatBox
             title="431,225"
-            subtitle="Sales Obtained"
+            subtitle="Total Staff"
             progress="0.50"
             increase="+21%"
             icon={
@@ -119,7 +119,7 @@ function Dashboard() {
         >
           <StatBox
             title="32,441"
-            subtitle="New Clients"
+            subtitle="Examination"
             progress="0.30"
             increase="+5%"
             icon={
@@ -138,7 +138,7 @@ function Dashboard() {
         >
           <StatBox
             title="1,325,134"
-            subtitle="Traffic Received"
+            subtitle="Report Management"
             progress="0.80"
             increase="+43%"
             icon={

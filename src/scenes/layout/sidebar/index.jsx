@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
 import { tokens } from "../../../theme";
 import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
@@ -18,8 +20,6 @@ import {
   TimelineOutlined,
   WavesOutlined,
 } from "@mui/icons-material";
-import avatar from "../../../assets/images/avatar.png";
-import logo from "../../../assets/images/logo.png";
 import Item from "./Item";
 import { ToggledContext } from "../../../App";
 
@@ -65,19 +65,6 @@ const SideBar = () => {
                 gap="12px"
                 sx={{ transition: ".3s ease" }}
               >
-                <img
-                  style={{ width: "30px", height: "30px", borderRadius: "8px" }}
-                  src={logo}
-                  alt="Argon"
-                />
-                <Typography
-                  variant="h4"
-                  fontWeight="bold"
-                  textTransform="capitalize"
-                  color={colors.greenAccent[500]}
-                >
-                  Argon
-                </Typography>
               </Box>
             )}
             <IconButton onClick={() => setCollapsed(!collapsed)}>
@@ -92,25 +79,29 @@ const SideBar = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "10px",
-            mb: "25px",
+            gap: "8px",
+            mb: "16px",
           }}
         >
-          <Avatar
-            alt="avatar"
-            src={avatar}
-            sx={{ width: "100px", height: "100px" }}
-          />
+          <Box display="flex" justifyContent="center" alignItems="center">
+            <FontAwesomeIcon
+              icon={faUser}
+              style={{
+                fontSize: "100px",
+                color: "#555", // Adjust color as needed
+              }}
+            />
+          </Box>
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="h3" fontWeight="bold" color={colors.gray[100]}>
-             Super Admin
+              Super Admin
             </Typography>
             <Typography
               variant="h6"
               fontWeight="500"
               color={colors.greenAccent[500]}
             >
-             Admin
+              Admin
             </Typography>
           </Box>
         </Box>
@@ -140,7 +131,7 @@ const SideBar = () => {
           color={colors.gray[300]}
           sx={{ m: "15px 0 5px 20px" }}
         >
-          {!collapsed ? "Data" : " "}
+          {!collapsed ? "School Registration" : " "}
         </Typography>{" "}
         <Menu
           menuItemStyles={{
@@ -154,19 +145,19 @@ const SideBar = () => {
           }}
         >
           <Item
-            title="Manage Team"
+            title="Register School"
             path="/team"
             colors={colors}
             icon={<PeopleAltOutlined />}
           />
           <Item
-            title="Contacts Information"
+            title="Add Employee"
             path="/contacts"
             colors={colors}
             icon={<ContactsOutlined />}
           />
           <Item
-            title="Invoices Balances"
+            title="Add Client KYC"
             path="/invoices"
             colors={colors}
             icon={<ReceiptOutlined />}
@@ -177,7 +168,7 @@ const SideBar = () => {
           color={colors.gray[300]}
           sx={{ m: "15px 0 5px 20px" }}
         >
-          {!collapsed ? "Pages" : " "}
+          {!collapsed ? "Acadmics" : " "}
         </Typography>
         <Menu
           menuItemStyles={{
@@ -191,19 +182,37 @@ const SideBar = () => {
           }}
         >
           <Item
-            title="Profile Form"
+            title="Add Session Year"
             path="/form"
             colors={colors}
             icon={<PersonOutlined />}
           />
           <Item
-            title="Calendar"
+            title="Add Program"
             path="/calendar"
             colors={colors}
             icon={<CalendarTodayOutlined />}
           />
           <Item
-            title="FAQ Page"
+            title="Add Stream"
+            path="/faq"
+            colors={colors}
+            icon={<HelpOutlineOutlined />}
+          />
+          <Item
+            title="Add Class"
+            path="/faq"
+            colors={colors}
+            icon={<HelpOutlineOutlined />}
+          />
+          <Item
+            title="Add Divsion"
+            path="/faq"
+            colors={colors}
+            icon={<HelpOutlineOutlined />}
+          />
+          <Item
+            title="Add Semseter"
             path="/faq"
             colors={colors}
             icon={<HelpOutlineOutlined />}
